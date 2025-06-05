@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carbonchain</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../css/index.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-success" href="#">Carbonchain</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#como-funciona">Como Funciona</a></li>
+          <li class="nav-item"><a class="nav-link" href="#beneficios">Benefícios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+        <a href="login.html" class="btn btn-success">Entrar</a>
+        <a href="../html/wallet.html" class="btn btn-outline-success ms-2" id="connectWalletButton">Conectar Wallet</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero py-5" id="inicio">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+
+      <!-- Coluna da esquerda: Texto -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h1 class="fw-bold text-success">Transforme sua preservação em valor econômico</h1>
+        <p class="mt-3">Descubra como cadastrar sua área no Carbonchain e transformar sua preservação em créditos de carbono valiosos.</p>
+        <a href="#cadastroterra" class="btn btn-success mt-3">Cadastrar sua Terra</a>
+      </div>
+
+      <!-- Coluna da direita: Imagem com selo -->
+      <div class="col-md-6">
+        <div class="image-box position-relative">
+          <img src="../img/paisagem-natural.jpg" alt="Paisagem natural" class="img-fluid rounded-4 shadow" />
+          <div class="badge-floating bg-white rounded-3 shadow-sm p-3 position-absolute">
+            <p class="mb-1 fw-semibold text-success">✔ Processo Verificado</p>
+            <p class="mb-0 text-muted small">Já tokenizamos mais de 50.000 hectares de áreas preservadas em todo o Brasil</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="stats py-5 text-center">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="stat-item">
+            <div class="icon-circle bg-success-subtle text-success mb-2">
+              <i class="bi bi-tree"></i>
+            </div>
+            <h2 class="text-success fw-bold">50.000</h2>
+            <p>Hectares já tokenizados</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-item">
+            <div class="icon-circle bg-warning-subtle text-warning mb-2">
+              <i class="bi bi-people"></i>
+            </div>
+            <h2 class="text-success fw-bold">350</h2>
+            <p>Proprietários beneficiados</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-item">
+            <div class="icon-circle bg-info-subtle text-info mb-2">
+              <i class="bi bi-cash-coin"></i>
+            </div>
+            <h2 class="text-success fw-bold">R$ 15MM</h2>
+            <p>Em tokens distribuídos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="como-funciona" id="como-funciona">
+    <div class="container text-center">
+      <h2 class="titulo-secao">Como Funciona</h2>
+      <p class="subtitulo-secao">
+        Transforme sua área de preservação em ativos digitais através de uma plataforma segura e verificada.
+      </p>
+
+      <div class="row justify-content-center">
+        <!-- Etapa 1 -->
+        <div class="col-md-3 mb-4 d-flex flex-column align-items-center">
+          <div class="card-wrapper h-100">
+            <div class="card-custom d-flex flex-column justify-content-between h-100">
+              <div>
+                <div class="numero-etapa">1</div>
+                <h5 class="titulo-etapa">Cadastro e Verificação</h5>
+                <p class="descricao-etapa">
+                  Registre sua propriedade na plataforma e envie os documentos necessários para verificação.
+                </p>
+                <img src="../img/cadastro_e_verificacao.jpg" alt="Cadastro e Verificação" class="imagem-etapa">
+              </div>
+              <div class="linha-inferior"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Etapa 2 -->
+        <div class="col-md-3 mb-4 d-flex flex-column align-items-center">
+          <div class="card-wrapper h-100">
+            <div class="card-custom d-flex flex-column justify-content-between h-100">
+              <div>
+                <div class="numero-etapa">2</div>
+                <h5 class="titulo-etapa">Análise e Tokenização</h5>
+                <p class="descricao-etapa">
+                  Nossa equipe técnica analisa sua propriedade, quantifica o potencial de crédito de carbono e cria tokens digitais.
+                </p>
+                <img src="../img/tokenizacao.jpg" alt="Análise e Tokenização" class="imagem-etapa">
+              </div>
+              <div class="linha-inferior"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Etapa 3 -->
+        <div class="col-md-3 mb-4 d-flex flex-column align-items-center">
+          <div class="card-wrapper h-100">
+            <div class="card-custom d-flex flex-column justify-content-between h-100">
+              <div>
+                <div class="numero-etapa">3</div>
+                <h5 class="titulo-etapa">Monetização</h5>
+                <p class="descricao-etapa">
+                  Seus tokens são comercializados em nossa plataforma para empresas interessadas em compensar sua pegada de carbono.
+                </p>
+                <img src="../img/monetização.jpeg" alt="Monetização" class="imagem-etapa">
+              </div>
+              <div class="linha-inferior"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção: Benefícios para Proprietários -->
+  <section class="beneficios-proprietarios py-5" id="beneficios">
+    <div class="container text-center">
+      <h2 class="titulo-secao">Benefícios para Proprietários</h2>
+      <p class="subtitulo-secao mb-5">
+        Descubra como a Carbonchain pode transformar sua área de preservação em uma<br>
+        fonte de renda sustentável.
+      </p>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Renda Adicional -->
+        <div class="col-md-5">
+          <div class="card-beneficio d-flex">
+            <div class="icone-beneficio">
+              <i class="bi bi-cash-coin"></i>
+            </div>
+            <div>
+              <h5 class="titulo-beneficio">Renda Adicional</h5>
+              <p class="descricao-beneficio">
+                Monetize sua área de preservação sem alterar seu uso atual, gerando uma nova fonte de receita contínua.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segurança Jurídica -->
+        <div class="col-md-5">
+          <div class="card-beneficio d-flex">
+            <div class="icone-beneficio">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <div>
+              <h5 class="titulo-beneficio">Segurança Jurídica</h5>
+              <p class="descricao-beneficio">
+                Nossa plataforma oferece contratos transparentes e verificáveis, garantindo segurança em todas as etapas do processo.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Incentivo à Conservação -->
+        <div class="col-md-5">
+          <div class="card-beneficio d-flex">
+            <div class="icone-beneficio">
+              <i class="bi bi-tree-fill"></i>
+            </div>
+            <div>
+              <h5 class="titulo-beneficio">Incentivo à Conservação</h5>
+              <p class="descricao-beneficio">
+                Ao monetizar a preservação, você cria um incentivo econômico para manter e ampliar áreas protegidas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Valorização da Propriedade -->
+        <div class="col-md-5">
+          <div class="card-beneficio d-flex">
+            <div class="icone-beneficio">
+              <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <div>
+              <h5 class="titulo-beneficio">Valorização da Propriedade</h5>
+              <p class="descricao-beneficio">
+                Propriedades com áreas de preservação certificadas tendem a se valorizar no mercado imobiliário.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Blockchain -->
+  <section class="blockchain-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="blockchain-title">Tecnologia Blockchain para Transparência Total</h1>
+          <p class="blockchain-description">
+            A CarbonChain utiliza tecnologia blockchain para garantir que cada token represente com precisão o crédito de carbono da sua propriedade, criando um registro imutável e transparente.
+          </p>
+
+          <ul class="blockchain-benefits">
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              <span>Registro permanente e imutável de propriedade</span>
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              <span>Rastreabilidade completa das transações</span>
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              <span>Eliminação de intermediários e redução de custos</span>
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i>
+              <span>Liquidez imediata para seus créditos de carbono</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="security-card">
+            <i class="bi bi-shield-lock security-icon"></i>
+            <h3 class="security-title">Segurança Garantida</h3>
+            <p class="security-text">
+              Cada transação é verificada e autenticada na blockchain, garantindo a integridade de todo o processo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Depoimentos -->
+  <section class="depoimentos-section">
+    <div class="container">
+      <h2 class="section-title">O que dizem nossos parceiros</h2>
+      <p class="section-subtitle">Proprietários que já confiam na CarbonChain para monetizar suas áreas de preservação</p>
+
+      <div class="depoimentos-container">
+        <div class="depoimento-card">
+          <p class="depoimento-texto">"A tokenização da minha área de preservação me proporcionou uma renda que eu não imaginava ser possível. Agora preservar a natureza é um bom negócio."</p>
+          <div class="depoimento-autor">
+            <strong>Carlos Mendes</strong>
+            <span>Proprietário em Minas Gerais</span>
+          </div>
+        </div>
+
+        <div class="depoimento-card">
+          <p class="depoimento-texto">"O processo foi muito mais simples do que eu imaginava. A CarbonChain cuidou de toda a parte técnica e agora recebo rendimentos regularmente."</p>
+          <div class="depoimento-autor">
+            <strong>Ana Leite Silva</strong>
+            <span>Proprietária no Paraná</span>
+          </div>
+        </div>
+
+        <div class="depoimento-card">
+          <p class="depoimento-texto">"Além do retorno financeiro, sinto orgulho em contribuir para a preservação ambiental. A transparência do processo me deu muita segurança."</p>
+          <div class="depoimento-autor">
+            <strong>Roberto Soma</strong>
+            <span>Proprietário no Mato Grosso</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção FAQ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2 class="section-title">Perguntas Frequentes</h2>
+      <p class="section-subtitle">Tire suas dúvidas sobre a tokenização de créditos de carbono</p>
+
+      <div class="accordion" id="faqAccordion">
+        <!-- Item 1 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              O que são créditos de carbono?
+            </button>
+          </h3>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Créditos de carbono são certificados que representam o direito de emitir uma tonelada de gás carbônico equivalente. Eles são gerados por projetos que reduzem ou removem gases de efeito estufa da atmosfera.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              Que tipo de propriedade se qualifica?
+            </button>
+          </h3>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Qualquer propriedade com áreas de preservação permanente (APP), reserva legal ou projetos de reflorestamento pode se qualificar, desde que siga os critérios estabelecidos pelas normas ambientais.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              Como é calculado o valor dos meus créditos?
+            </button>
+          </h3>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              O valor é calculado com base na quantidade de carbono sequestrado ou não emitido, considerando o tipo de vegetação, extensão da área e período de preservação, seguindo metodologias internacionais reconhecidas.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+              O que significa tokenizar créditos de carbono?
+            </button>
+          </h3>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Tokenizar significa transformar seus créditos de carbono em ativos digitais (tokens) na blockchain, o que permite negociá-los de forma mais ágil, segura e transparente em mercados globais.
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+              Quais documentos preciso fornecer?
+            </button>
+          </h3>
+          <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Você precisará fornecer documentos de posse da terra, laudos ambientais, cadastro no CAR (Cadastro Ambiental Rural) e outros documentos que comprovem a elegibilidade da área para geração de créditos.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Cadastro -->
+  <section class="cadastro-section" id="cadastroterra">
+    <div class="cadastro-container">
+
+      <!-- Coluna do Formulário -->
+      <div class="cadastro-form-coluna">
+        <div class="cadastro-header">
+          <h1 class="cadastro-titulo">Cadastre sua Propriedade</h1>
+          <p class="cadastro-subtitulo">
+            Preencha o formulário para iniciar o processo de avaliação da sua área de preservação.<br>
+            Nossa equipe entrará em contato para os próximos passos.
+          </p>
+        </div>
+
+        <form class="cadastro-formulario" id="formCadastro">
+          <!-- Nome Completo -->
+          <div class="cadastro-form-grupo">
+            <label for="cadastro-nome" class="cadastro-label">Nome Completo</label>
+            <input type="text" id="cadastro-nome" class="cadastro-input" placeholder="Digite seu nome completo" required>
+            <span class="cadastro-validacao"></span>
+          </div>
+
+          <!-- E-mail -->
+          <div class="cadastro-form-grupo">
+            <label for="cadastro-email" class="cadastro-label">E-mail</label>
+            <input type="email" id="cadastro-email" class="cadastro-input" placeholder="seuemail@exemplo.com" required>
+            <span class="cadastro-validacao"></span>
+          </div>
+
+          <!-- Telefone -->
+          <div class="cadastro-form-grupo">
+            <label for="cadastro-telefone" class="cadastro-label">Telefone</label>
+            <input type="tel" id="cadastro-telefone" class="cadastro-input" placeholder="(XX) XXXXX-XXXX" required>
+            <span class="cadastro-validacao"></span>
+          </div>
+
+          <!-- Localização -->
+          <div class="cadastro-form-grupo">
+            <label for="cadastro-localizacao" class="cadastro-label">Localização da Propriedade</label>
+            <input type="text" id="cadastro-localizacao" class="cadastro-input" placeholder="Cidade/Estado" required>
+            <span class="cadastro-validacao"></span>
+          </div>
+
+          <!-- Tamanho da Área -->
+          <div class="cadastro-form-grupo">
+            <label for="cadastro-tamanho" class="cadastro-label">Tamanho da Área (hectares)</label>
+            <input type="number" id="cadastro-tamanho" class="cadastro-input" placeholder="Ex: 25.5" min="0" step="0.1" required>
+            <span class="cadastro-validacao"></span>
+          </div>
+
+          <!-- Tipo de Vegetação -->
+          <div class="cadastro-form-grupo">
+            <label for="cadastro-vegetacao" class="cadastro-label">Tipo de Vegetação</label>
+            <select id="cadastro-vegetacao" class="cadastro-select" required>
+              <option value="" disabled selected>Selecione o bioma</option>
+              <option value="mata_atlantica">Mata Atlântica</option>
+              <option value="cerrado">Cerrado</option>
+              <option value="amazonia">Amazônia</option>
+              <option value="caatinga">Caatinga</option>
+            </select>
+            <span class="cadastro-validacao"></span>
+          </div>
+
+          <!-- Senha -->
+          <div class="cadastro-form-grupo">
+            <label for="cadastro-senha" class="cadastro-label">Senha</label>
+            <div class="cadastro-senha-container">
+              <input type="password" id="cadastro-senha" class="cadastro-input" placeholder="Digite sua senha" required>
+              <button type="button" class="cadastro-senha-toggle" aria-label="Mostrar senha">
+                <i class="cadastro-senha-icon"></i>
+              </button>
+            </div>
+            <span class="cadastro-validacao"></span>
+          </div>
+
+          <!-- Confirmar Senha -->
+          <div class="cadastro-form-grupo">
+            <label for="cadastro-confirmar-senha" class="cadastro-label">Confirmar Senha</label>
+            <div class="cadastro-senha-container">
+              <input type="password" id="cadastro-confirmar-senha" class="cadastro-input" placeholder="Repita sua senha" required>
+              <button type="button" class="cadastro-senha-toggle" aria-label="Mostrar senha">
+                <i class="cadastro-senha-icon"></i>
+              </button>
+            </div>
+            <span class="cadastro-validacao"></span>
+          </div>
+
+          <!-- Informações Adicionais -->
+          <div class="cadastro-form-grupo">
+            <label for="cadastro-info" class="cadastro-label">Informações Adicionais</label>
+            <textarea id="cadastro-info" class="cadastro-textarea" placeholder="Observações relevantes" rows="3"></textarea>
+          </div>
+
+          <!-- Rodapé do Formulário -->
+          <div class="cadastro-form-footer">
+            <div class="cadastro-footer-info">
+              <h4 class="cadastro-footer-title">Informações Importantes</h4>
+              <p class="cadastro-footer-text">Após o envio, nossa equipe realizará uma pré-avaliação em até 48h.</p>
+            </div>
+
+            <div class="cadastro-termos-container">
+              <input type="checkbox" id="cadastro-termos-aceite" class="cadastro-termos-checkbox" required>
+              <label for="cadastro-termos-aceite" class="cadastro-termos-label">
+                Li e aceito os <a href="#" class="cadastro-termos-link">termos do processo de avaliação</a>
+              </label>
+              <span class="cadastro-termos-error"></span>
+            </div>
+          </div>
+
+          <!-- Botão de Envio -->
+          <div class="cadastro-acoes">
+            <button type="submit" class="cadastro-botao">
+              <span class="cadastro-botao-texto">Enviar Cadastro</span>
+              <span class="cadastro-botao-carregando"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Coluna da Imagem -->
+      <div class="cadastro-imagem-coluna">
+        <div class="cadastro-imagem-container">
+          <img src="../img/foto_form.jpg" alt="Paisagem natural preservada" class="cadastro-imagem">
+          <div class="cadastro-selo">
+            <div class="cadastro-selo-icone">✓</div>
+            <div class="cadastro-selo-conteudo">
+              <h3 class="cadastro-selo-titulo">Processo rápido e seguro</h3>
+              <p class="cadastro-selo-texto">Cadastro iniciado em menos de 5 minutos.Todo o processo de tokenização pode ser concluído em até 60 dias.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contato" id="contato">
+    <div class="container text-center">
+      <h2 class="titulo-contato">Entre em Contato</h2>
+      <p class="subtitulo-contato">
+        Tire suas dúvidas e saiba mais sobre como a Carbonchain pode ajudar você.
+      </p>
+      <div class="row justify-content-center infos-contato">
+        <div class="col-md-3 box-contato">
+          <i class="bi bi-envelope-fill icone-contato"></i>
+          <h5 class="titulo-box">E-mail</h5>
+          <p>contato@carbonchain.com.br</p>
+        </div>
+        <div class="col-md-3 box-contato">
+          <i class="bi bi-telephone-fill icone-contato"></i>
+          <h5 class="titulo-box">Telefone</h5>
+          <p>(11) 3456-7890</p>
+        </div>
+        <div class="col-md-3 box-contato">
+          <i class="bi bi-geo-alt-fill icone-contato"></i>
+          <h5 class="titulo-box">Endereço</h5>
+          <p>Av. Paulista, 1000, São Paulo - SP</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-3 logo-footer">
+          <h4 class="logo-nome">🌱 Carbon<span>chain</span></h4>
+          <p>Transformando preservação ambiental em valor econômico através da tecnologia blockchain.</p>
+          <div class="redes-sociais">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <h6>Links Rápidos</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Como Funciona</a></li>
+            <li><a href="#">Benefícios</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Cadastro</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6>Recursos</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Guia de Tokenização</a></li>
+            <li><a href="#">Calculadora de Créditos</a></li>
+            <li><a href="#">Estudos de Caso</a></li>
+            <li><a href="#">Parcerias</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6>Newsletter</h6>
+          <p>Receba novidades sobre créditos de carbono e oportunidades de preservação.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Seu e-mail">
+            <button><i class="bi bi-send-fill"></i></button>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center text-white-50">© 2025 Carbonchain. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

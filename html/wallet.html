@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Carbonchain - Sustainable crypto wallet and swap">
+  <meta name="theme-color" content="#1baa5d">
+  <title>Carbonchain - Wallet</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/wallet.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo">
+      <span><span class="carbon">Carbon</span><span class="chain">chain</span></span>
+    </div>
+    <div class="user-menu">
+      <div class="user-info">
+        <a href="../html/perfil.html">
+          <i class="fas fa-user-circle" id="user-icon"></i>
+        </a>
+      </div>      
+      <div class="dropdown" id="dropdown-menu">
+        <a href="#"><i class="fas fa-list"></i> Listar Propriedades</a>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> Sair</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <div class="swap-container">
+      <div class="swap-header">
+        <div>Swap</div>
+        <div><span class="settings-icon">⚙️</span></div>
+      </div>
+
+      <div class="token-box">
+        <div class="token-box-header">
+          <span>From</span>
+          <span>Balance: 0</span>
+        </div>
+        <div class="token-select">
+          <button class="token-button">Select Token</button>
+          <span class="amount">0.0</span>
+        </div>
+      </div>
+
+      <div class="swap-icon">↓</div>
+
+      <div class="token-box">
+        <div class="token-box-header">
+          <span>To</span>
+          <span>Balance: 0</span>
+        </div>
+        <div class="token-select">
+          <button class="token-button">Select Token</button>
+          <span class="amount">0.0</span>
+        </div>
+      </div>
+
+      <button class="connect-button">Connect Wallet</button>
+    </div>
+  </div>
+</body>
+</html>

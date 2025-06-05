@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eaf5ee;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px 20px;
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #eaf5ee;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .carbon {
+    color: #1b5e20;
+  }
+  
+  .chain {
+    color: #00a859;
+  }
+  
+  .user-greeting {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .value {
+    color: #555;
+    flex-grow: 1;
+    margin: 0 20px;
+  }
+  
+  .edit-btn {
+    background-color: #00a859;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .edit-btn:hover {
+    background-color: #008e4e;
+  }
+  
+  .voltar {
+    display: block;
+    text-align: center;
+    margin: 20px auto 40px;
+    font-size: 16px;
+    color: #1b5e20;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  .voltar:hover {
+    transform: translateY(-3px);
+    color: #0e3d13;
+  }
+  
+  

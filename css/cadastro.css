@@ -1,0 +1,141 @@
+:root {
+  --cc-primary-color: #1baa5d;
+  --cc-primary-hover: #169a51;
+  --cc-text: #2d3e50;
+  --cc-muted: #7f8c8d;
+  --cc-border: #dcdcdc;
+  --cc-bg: #f5f5f5;
+  --cc-white: #ffffff;
+  --cc-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --cc-radius: 12px;
+  --background-color: #f0fdf4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.cc-body {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.cc-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.cc-form {
+  background: var(--cc-white);
+  padding: 3rem;
+  border-radius: var(--cc-radius);
+  box-shadow: var(--cc-shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.cc-form__title {
+  color: var(--cc-text);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+.cc-form__group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+
+.cc-form__group label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--cc-text);
+  margin-bottom: 0.4rem;
+}
+
+.cc-form__group label i {
+  margin-right: 6px;
+  color: var(--cc-muted);
+}
+
+.cc-form__group input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--cc-border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.cc-form__group input:focus {
+  border-color: var(--cc-primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(67, 160, 71, 0.2);
+}
+
+.cc-form__group--password {
+  position: relative;
+}
+
+.cc-password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 70%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--cc-muted);
+  cursor: pointer;
+}
+
+.cc-password-toggle i {
+  font-size: 1rem;
+}
+
+.cc-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cc-button--primary {
+  background-color: var(--cc-primary-color);
+  color: var(--cc-white);
+}
+
+.cc-button--primary:hover {
+  background-color: var(--cc-primary-hover);
+}
+
+.cc-form__footer {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--cc-muted);
+}
+
+.cc-link {
+  color: var(--cc-primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cc-link:hover {
+  text-decoration: underline;
+}

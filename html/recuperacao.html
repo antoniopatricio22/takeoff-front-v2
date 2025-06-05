@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redefinir Senha | Carbonchain</title>
+  <link rel="stylesheet" href="../css/recuperacao.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Redefinir senha</h1>
+      <p class="subtitle">Digite o e-mail associado à sua conta para receber o link de redefinição</p>
+
+      <form action="/enviar-reset" method="POST" class="form-recuperacao">
+        <div class="input-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required placeholder="seu@email.com">
+        </div>
+
+        <button type="submit" class="btn-primary">
+          Enviar link de recuperação
+        </button>
+      </form>
+
+      <div class="footer-links">
+        <a href="login.html" class="back-link">
+          ← Voltar para a página de login
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

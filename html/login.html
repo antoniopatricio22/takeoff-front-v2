@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Carbonchain</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+  <main class="container">
+    <section class="login-section">
+      <div class="logo-area">
+        <div class="logo-icon"></div>
+        <h1><span class="carbon">Carbon</span><span class="chain">chain</span></h1>
+      </div>
+      
+      <div class="login-header">
+        <h2>Acesse sua conta</h2>
+        <p>Entre com suas credenciais para acessar sua conta e gerenciar seus créditos de carbono.</p>
+      </div>
+
+      <form class="login-form">
+        <div class="input-group">
+          <label for="email">E-mail</label>
+          <input type="text" id="email" name="email" required placeholder="Digite seu e-mail">
+          <i class="fas fa-user"></i>
+        </div>
+
+        <div class="input-group">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+          <i class="fas fa-lock"></i>
+          <button type="button" class="toggle-password" aria-label="Mostrar senha">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" name="remember">
+            <span>Lembrar de mim</span>
+          </label>
+          <a href="recuperacao.html" class="forgot-password">Esqueceu sua senha?</a>
+        </div>
+
+        <button type="submit" class="login-button">
+          <span>Entrar</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+
+        <div class="signup-link">
+          Não tem uma conta ainda? <a href="../html/cadastro.html">Cadastre-se agora</a>
+        </div>
+      </form>
+    </section>
+
+    <section class="banner-section">
+      <div class="banner-content">
+        <h2>Transforme sua preservação em valor econômico</h2>
+        <p>Acesse sua conta para gerenciar seus créditos de carbono e acompanhar o processo de tokenização da sua área de preservação.</p>
+        
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-value">100K+</div>
+            <div class="stat-label">Hectares tokenizados</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">500+</div>
+            <div class="stat-label">Proprietários</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+
+  </main>
+
+  <!-- Modal para exibir mensagens -->
+    <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="messageModalLabel">Mensagem</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body" id="messageModalBody">
+                    <!-- Conteúdo da mensagem será inserido aqui -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <script>
+    // Alternar visibilidade da senha
+    document.querySelector('.toggle-password').addEventListener('click', function() {
+      const passwordInput = document.getElementById('senha');
+      const icon = this.querySelector('i');
+      
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        icon.classList.replace('fa-eye', 'fa-eye-slash');
+      } else {
+        passwordInput.type = 'password';
+        icon.classList.replace('fa-eye-slash', 'fa-eye');
+      }
+    });
+  </script>
+
+  <!-- Integração real com backend -->
+   <!-- Bootstrap 5 JS e Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../scripts/config.js"></script>
+  <script src="../scripts/auth.js"></script>
+  <script>
+    document.querySelector('.login-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      await handleLogin(); // definida em auth.js
+    });
+  </script>
+</body>
+</html>

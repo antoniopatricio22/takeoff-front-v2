@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "../takeoff1"
+    },
+    {
+      "path": "../../Downloads/font"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "takeoff1"
+  }
+}

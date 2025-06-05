@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Propriedades Cadastradas | Carbonchain</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/propriedades.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo">
+      <span><span class="carbon">Carbon</span><span class="chain">chain</span></span>
+    </div>
+    <div class="user-menu">
+      <span id="usuarioNome"></span>
+      <button id="btnLogout" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="header-section">
+      <h1>Propriedades Cadastradas</h1>
+      <button class="add-button">
+        <i class="fas fa-plus"></i> Adicionar Propriedade
+      </button>
+    </div>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>ID CAR</th>
+            <th>Área (hectares)</th>
+            <th>Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="listaPropriedades">
+          <!-- As propriedades serão inseridas aqui via JS -->
+        </tbody>
+      </table>
+      <div id="semPropriedades" class="d-none" style="margin-top:1rem;">Nenhuma propriedade encontrada.</div>
+    </div>
+  </main>
+
+  <!-- Modal para mensagens -->
+  <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="messageModalLabel"></h5>
+        </div>
+        <div class="modal-body" id="messageModalBody"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../scripts/config.js"></script>
+  <script src="../scripts/auth.js"></script>
+  <script>
+  // Verificar se o usuário está autenticado como proprietário
+  document.addEventListener('DOMContentLoaded', function() {
+    const token = localStorage.getItem('authToken');
+    const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+    const userRole = userData.role;
+    const userName = userData.nome;
+
+    if (!token || userRole !== 'PROPRIETARIO') {
+      window.location.href = 'index.html';
+      return;
+    }
+
+    // Exibir nome do usuário
+    if (userName) {
+      document.getElementById('usuarioNome').textContent = `Olá, ${userName}`;
+    }
+
+    // Configurar evento de logout
+    document.getElementById('btnLogout').addEventListener('click', function(e) {
+      e.preventDefault();
+      logout();
+    });
+
+    // Carregar lista de propriedades
+    carregarPropriedades();
+  });
+
+  // Função para carregar as propriedades do proprietário
+  function carregarPropriedades() {
+    const token = localStorage.getItem('authToken');
+    fetch(API_ROUTES.PROPRIEDADES.BASE, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'success') {
+        exibirPropriedades(data.data);
+      } else {
+        mostrarMensagem('Erro', data.error || 'Erro ao carregar propriedades');
+      }
+    })
+    .catch(error => {
+      console.error('Erro ao carregar propriedades:', error);
+      mostrarMensagem('Erro', 'Erro ao carregar propriedades. Por favor, tente novamente.');
+    });
+  }
+
+  // Função para exibir as propriedades na tabela
+  function exibirPropriedades(propriedades) {
+    const listaElement = document.getElementById('listaPropriedades');
+    const semPropriedadesElement = document.getElementById('semPropriedades');
+
+    if (!propriedades || propriedades.length === 0) {
+      listaElement.innerHTML = '';
+      semPropriedadesElement.classList.remove('d-none');
+      return;
+    }
+
+    semPropriedadesElement.classList.add('d-none');
+    listaElement.innerHTML = '';
+
+    propriedades.forEach(prop => {
+      let statusBadge = '';
+      switch (prop.status) {
+        case 'VERIFICADO':
+          statusBadge = '<span class="status-badge verificado">Verificado</span>';
+          break;
+        case 'PENDENTE':
+          statusBadge = '<span class="status-badge analise">Em análise</span>';
+          break;
+        default:
+          statusBadge = `<span class="status-badge">${prop.status}</span>`;
+      }
+
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${prop.nome}</td>
+        <td>${prop.idCAR || '-'}</td>
+        <td>${prop.areaPreservada}</td>
+        <td>${statusBadge}</td>
+        <td>
+          <button class="action-button" disabled>
+            <i class="fas fa-check"></i> Aprovar
+          </button>
+        </td>
+      `;
+      listaElement.appendChild(row);
+    });
+  }
+
+  // Função para mostrar mensagens em um modal
+  function mostrarMensagem(titulo, mensagem) {
+    const modalTitle = document.getElementById('messageModalLabel');
+    const modalBody = document.getElementById('messageModalBody');
+    modalTitle.textContent = titulo;
+    modalBody.textContent = mensagem;
+    const messageModal = new bootstrap.Modal(document.getElementById('messageModal'));
+    messageModal.show();
+  }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

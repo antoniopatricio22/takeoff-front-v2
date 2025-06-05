@@ -1,0 +1,100 @@
+@import url('fonts.css');
+
+/* Resetando margens e paddings padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0033A0; /* Azul oficial do Banco do Brasil */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinhar conteúdo ao topo */
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background: #FFCC29;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    max-width: 80px; /* Reduzido para melhor proporção */
+    height: auto;
+}
+
+.your-style {
+    font-family: 'BancoDoBrasil Textos', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1; /* Garante que o container ocupe o espaço disponível */
+}
+
+.cadastro-container {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.card {
+    background-color: #FFFFFF; /* Card branco */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.form-control, .form-select {
+    border: 1px solid #CED4DA;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.form-control::placeholder {
+    color: #6C757D;
+}
+
+.btn-continuar {
+    background-color: #FFCC29; /* Amarelo oficial do Banco do Brasil */
+    border: none;
+    color: #000000;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-continuar:hover {
+    background-color: #E6B800; /* Tom mais escuro do amarelo */
+}
+
+.back-to-login {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 50px; /* Espaço adicionado abaixo do botão de voltar ao login */
+}
+
+.back-to-login:hover {
+    color: #FFCC29;
+}
+
+.text-muted {
+    color: #6C757D !important;
+}

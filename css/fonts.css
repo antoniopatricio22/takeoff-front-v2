@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Banco do Brasil Textos';
+  src: url('fonts/BancoDoBrasilTextos-Regular.woff2') format('woff2'),
+       url('fonts/BancoDoBrasilTextos-Regular.woff') format('woff'),
+       url('fonts/BancoDoBrasilTextos-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Banco do Brasil Textos';
+  src: url('fonts/BancoDoBrasilTextos-Medium.woff2') format('woff2'),
+       url('fonts/BancoDoBrasilTextos-Medium.woff') format('woff'),
+       url('fonts/BancoDoBrasilTextos-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Banco do Brasil Textos';
+  src: url('fonts/BancoDoBrasilTextos-Bold.woff2') format('woff2'),
+       url('fonts/BancoDoBrasilTextos-Bold.woff') format('woff'),
+       url('fonts/BancoDoBrasilTextos-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Banco do Brasil Textos', sans-serif;
+}
